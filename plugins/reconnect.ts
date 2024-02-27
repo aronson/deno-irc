@@ -58,7 +58,7 @@ export default createPlugin(
 
     const { hostname, port, tls } = remoteAddr;
     timeout = setTimeout(
-      async () => await client.connect(hostname, port, tls),
+      async () => await client.connect(hostname, port, { tls }),
       delay * 1000,
     );
   };
